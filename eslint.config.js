@@ -1,25 +1,23 @@
-const js = require('@eslint/js');
-const globals = require('globals');
-const { defineConfig } = require('eslint/config')
-const stylistic = require('@stylistic/eslint-plugin');
+const js = require('@eslint/js')
+const globals = require('globals')
 
-
-module.exports = defineConfig([
-  stylistic.configs.recommended,
+module.exports = [
+  js.configs.recommended,
   {
     files: ['**/*.js'],
-    plugins: { 
-      js,
-      stylistic 
-    },
-    languageOptions: { 
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'commonjs',
       globals: {
         ...globals.node,
         ...globals.jest
       }
     },
     rules: {
-      'no-console': 'off'
+      'no-console': 'off',
+      'indent': ['error', 2],
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'always']
     }
-  },
-])
+  }
+]
