@@ -1,7 +1,8 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import { defineConfig } from 'eslint/config'
-import stylistic from '@stylistic/eslint-plugin'
+const js = require('@eslint/js');
+const globals = require('globals');
+const { defineConfig } = require('eslint/config')
+const stylistic = require('@stylistic/eslint-plugin');
+
 
 export default defineConfig([
   stylistic.configs.recommended,
