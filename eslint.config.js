@@ -1,7 +1,7 @@
-import js from '@eslint/js'
-import globals from 'globals'
+const js = require('@eslint/js')
+const globals = require('globals')
 
-export default [
+module.exports = [
   js.configs.recommended,
   {
     files: ['**/*.js'],
@@ -10,11 +10,7 @@ export default [
       sourceType: 'commonjs',
       globals: {
         ...globals.node,
-        ...globals.jest,
-        require: 'readonly',
-        module: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly'
+        ...globals.jest
       }
     },
     rules: {
