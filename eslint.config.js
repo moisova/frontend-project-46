@@ -4,12 +4,22 @@ const { defineConfig } = require('eslint/config')
 const stylistic = require('@stylistic/eslint-plugin');
 
 
-export default defineConfig([
+module.exports = defineConfig([
   stylistic.configs.recommended,
   {
-    files: ['**/*.{js,mjs,cjs}'],
-    plugins: { js },
-    extends: ['js/recommended'],
-    languageOptions: { globals: globals.node },
+    files: ['**/*.js'],
+    plugins: { 
+      js,
+      stylistic 
+    },
+    languageOptions: { 
+      globals: {
+        ...globals.node,
+        ...globals.jest
+      }
+    },
+    rules: {
+      'no-console': 'off'
+    }
   },
 ])
