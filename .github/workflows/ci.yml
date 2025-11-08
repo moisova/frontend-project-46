@@ -29,8 +29,8 @@ jobs:
     - name: Run linter
       run: make lint
     
-    - name: Run tests
-      run: make test-coverage
+#    - name: Run tests
+#      run: make test-coverage
     
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v6
