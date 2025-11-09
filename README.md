@@ -6,3 +6,6 @@
 
 ### SonarQube quality gate:
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=moisova_frontend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=moisova_frontend-project-46)
+
+### SonarQube test-coverage:
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=moisova_frontend-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=moisova_frontend-project-46)
