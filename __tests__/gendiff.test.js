@@ -1,8 +1,8 @@
 import { describe, expect, test } from '@jest/globals'
 import { compare  } from '../comparer'
-import path from 'path'
-import { fileURLToPath } from 'url'
-import { readFileSync } from 'fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { readFileSync } from 'node:fs'
 import { parseFile } from '../parser'
 
 const __filename = fileURLToPath(import.meta.url)

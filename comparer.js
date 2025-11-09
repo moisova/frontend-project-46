@@ -12,8 +12,10 @@ export function compare(firstObj, secondObj) {
           result.push(`  ${key}: ${firstObj[key]}`)
         } 
         else {
-          result.push(`- ${key}: ${firstObj[key]}`)
-          result.push(`+ ${key}: ${secondObj[key]}`)
+          result.push(
+            `- ${key}: ${firstObj[key]}`,
+            `+ ${key}: ${secondObj[key]}`
+          )
         }
       }
       else {
