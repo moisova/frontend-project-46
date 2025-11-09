@@ -1,6 +1,6 @@
-const _ = require('lodash')
+import _ from 'lodash'
 
-function compare(firstObj, secondObj) {
+export function compare(firstObj, secondObj) {
   const firstKeys = Object.keys(firstObj)
   const secondKeys = Object.keys(secondObj)
   const uniqueKeys = _.union(firstKeys, secondKeys).sort()
@@ -26,5 +26,3 @@ function compare(firstObj, secondObj) {
   }
   return result.join('\n')
 }
-
-module.exports = { compare }

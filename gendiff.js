@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-const { parseFile } = require('./parser')
-const { readFileSync } = require('node:fs')
-const path = require('path')
-const { Command } = require('commander')
-const { compare } = require('./comparer')
-const program = new Command()
+import { parseFile } from './parser.js';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
+import { Command } from 'commander';
+import { compare } from './comparer.js';
+
+const program = new Command();
 
 program
   .description('Compares two configuration files and shows a difference.')
