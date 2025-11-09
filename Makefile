@@ -5,4 +5,4 @@ lint:
 	npx eslint .
 
 test-coverage:
-	npm run test:coverage -- --passWithNoTests || true
+	npm run test:coverage
