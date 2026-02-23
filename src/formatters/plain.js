@@ -12,14 +12,13 @@ const stringify = (value) => {
 
 export const plain = (diff, path = '') => {
   const lines = diff
-    .filter((node) => node.type !== 'unchanged')
-    .flatMap((node) => {
+    .filter(node => node.type !== 'unchanged')
+    .flatMap(node => {
       const currentPath = path ? `${path}.${node.key}` : node.key
-
       switch (node.type) {
         case 'nested':
           return plain(node.children, currentPath)
-        
+
         case 'added':
           return `Property '${currentPath}' was added with value: ${stringify(node.value)}`
         

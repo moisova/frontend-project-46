@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { parseFile } from './parsers.js'
-import { buildTree } from './buildTree.js';
+import { buildTree } from './buildTree.js'
 import format from './formatters/format.js'
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
@@ -9,7 +9,7 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
 
   const data1 = parseFile(content1, filepath1)
   const data2 = parseFile(content2, filepath2)
-  
+
   const diff = buildTree(data1, data2)
   return format(diff, formatName)
 }

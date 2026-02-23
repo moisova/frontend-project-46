@@ -13,6 +13,6 @@ const formatter = (tree, format) => {
     default:
       throw new Error(`format ${format} not supported. Choose 'stylish', 'plain' or 'json'`)
   }
-};
+}
 
 export default formatter
