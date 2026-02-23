@@ -35,5 +35,4 @@ export const plain = (diff, path = '') => {
     })
 
   return lines.join('\n')
-};
-
+}

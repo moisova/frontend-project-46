@@ -1,4 +1,3 @@
-
 import { describe, expect, test } from '@jest/globals'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -16,7 +15,7 @@ const __dirname = path.dirname(__filename)
 const getFixturePath = (filename) => path.join(__dirname, '__fixtures__', filename)
 const readExpected = (name) => readFileSync(getFixturePath(`expected/${name}.txt`), 'utf-8')
 
-describe.each(['json', 'yaml'])('compare function for %s', (format) => {
+describe.each(['json', 'yaml'])('compare function for %s', format => {
   const readFile = (name) => parseFile(readFileSync(getFixturePath(`${name}.${format}`), 'utf-8'), `${name}.${format}`)
   test('test stylish formatter', () => {
     const obj1 = readFile('file1')
@@ -26,7 +25,7 @@ describe.each(['json', 'yaml'])('compare function for %s', (format) => {
   })
 })
 
-describe.each(['json', 'yaml'])('compare function for %s', (format) => {
+describe.each(['json', 'yaml'])('compare function for %s', format => {
   const readFile = (name) => parseFile(readFileSync(getFixturePath(`${name}.${format}`), 'utf-8'), `${name}.${format}`)
   test('test plain formatter', () => {
     const obj1 = readFile('file1')
@@ -36,7 +35,7 @@ describe.each(['json', 'yaml'])('compare function for %s', (format) => {
   })
 })
 
-describe.each(['json', 'yaml'])('compare function for %s', (format) => {
+describe.each(['json', 'yaml'])('compare function for %s', format => {
   const readFile = (name) => parseFile(readFileSync(getFixturePath(`${name}.${format}`), 'utf-8'), `${name}.${format}`)
   test('test json formatter', () => {
     const obj1 = readFile('file1')

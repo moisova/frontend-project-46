@@ -1,10 +1,10 @@
 import yaml from 'yaml'
 
 export const parseFile = (content, filename = '') => {
-   if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
+  if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
     return yaml.parse(content)
-   } 
-   else {
+  } 
+  else {
     return JSON.parse(content)
-   }
+  }
 }
