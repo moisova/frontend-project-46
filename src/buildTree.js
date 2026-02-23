@@ -20,14 +20,14 @@ export function buildTree(object1, object2) {
           type: 'nested',
           children: children,
         })
-      } 
+      }
       else if (_.isEqual(value1, value2)) {
         result.push({
           key: key,
           type: 'unchanged',
           value: value1,
         })
-      } 
+      }
       else {
         result.push({
           key: key,
@@ -36,14 +36,14 @@ export function buildTree(object1, object2) {
           newValue: value2,
         })
       }
-    } 
+    }
     else if (Object.hasOwn(object1, key)) {
       result.push({
         key: key,
         type: 'removed',
         value: value1,
       })
-    } 
+    }
     else if (Object.hasOwn(object2, key)) {
       result.push({
         key: key,
