@@ -1,5 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/moisova/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/moisova/frontend-project-46/actions)
+### Test and linter status: 
+[![CI](https://github.com/moisova/frontend-project-46/actions/workflows/ci.yaml/badge.svg)](https://github.com/moisova/frontend-project-46/actions/workflows/ci.yaml)
 ### SonarQube Test Coverage status:
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=moisova_frontend-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=moisova_frontend-project-46)
 ### Formatter stylish
