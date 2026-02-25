@@ -1,10 +1,15 @@
 import yaml from 'yaml'
 
 export const parseFile = (content, filename = '') => {
-  if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
-    return yaml.parse(content)
-  }
-  else {
-    return JSON.parse(content)
+  const extension = filename.split('.').pop().toLowerCase()
+
+  switch (extension) {
+    case 'json':
+      return JSON.parse(content)
+    case 'yaml':
+    case 'yml':
+      return yaml.parse(content)
+    default:
+      throw new Error(`Unsupported file format: .${extension}`)
   }
 }
